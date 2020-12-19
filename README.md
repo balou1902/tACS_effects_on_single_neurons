@@ -5,15 +5,15 @@ This folder contains the codes used in the paper Tran et al., 2020. Effects of t
 ## Information about the data
 Due to the high size of data, not all of them will be available in that depository. Some are given and will be used as an example. 
 
+
+
 ## Data generation
 The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. A supercomputer was used, however, depending on the length of simulation, it is possible to use a regular desktop or laptop. 
 
-For sub(supra)threshold investigation, the code is quite similar. For the suprathreshold activity investigation, a synapse was modeled. If you are investigatins the subthreshold activity, a silent neuron is used (no synapse). In that case, please comment line 92 from the init.hoc file.
+For sub(supra)threshold investigation, the code is quite similar. For the suprathreshold activity investigation, a synapse was modeled. If you are investigating the subthreshold activity, a silent neuron is used (no synapse). In that case, please comment line 92 from the init.hoc file.
 
 ## Data analysis
-
-
-Matlab, NEURON
+To analyse the data, a custom matlab code was used.
 
 
 
