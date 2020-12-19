@@ -16,10 +16,8 @@ To analyse the data, a custom matlab code was used.
 
 
 ## Reference
-Please use the following reference to cite this toolbox: Tran et al., 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons
+Please use the following reference: Tran et al., 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons
 
 ## Correspondence
-
 htran - at- umn.edu (Harry Tran)
-
 aopitz -at- umn.edu (Alex Opitz)
