@@ -20,4 +20,5 @@ Please use the following reference: Tran et al., 2020. Effects of transcranial a
 
 ## Correspondence
 htran - at- umn.edu (Harry Tran)
+
 aopitz -at- umn.edu (Alex Opitz)
