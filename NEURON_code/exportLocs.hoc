@@ -1,0 +1,125 @@
+objref midSecX, midSecY, midSecZ
+strdef s
+
+proc exportLocs(){ localobj savLocs
+	// all locs
+	midSecX = new Vector()
+	midSecY = new Vector()
+	midSecZ = new Vector()
+	
+	forsec cell.all{
+		midSecX.append(x_xtra(0.5))
+		midSecY.append(y_xtra(0.5))
+		midSecZ.append(z_xtra(0.5))
+	}
+	
+	neuron_section_size = midSecX.size()
+	
+    //chdir("results")
+
+	//sprint(s, "\"mkdir amp_%0.2f\"", AMP)
+	sprint(s, "\"mkdir amp_%0.2f_cell_%0.1d\"",AMP, my_cell_type)   
+	system(s)
+	//sprint(s, "%amp_0.2f", AMP)
+	sprint(s, "\"mkdir amp_%0.2f_cell_%0.1d\"",AMP, my_cell_type)   
+	chdir(s)
+
+	///system("mkdir spikes")
+	//chdir("../..")
+	
+		
+    savLocs = new File()
+	sprint(s,"./results/%s/locs_somatic.txt",result_folder)
+	savLocs.wopen(s)
+	
+	for i=0,midSecX.size()-1 {
+		savLocs.printf("%.4f %.4f %.4f\n", midSecX.x(i), midSecY.x(i), midSecZ.x(i))
+	}
+	
+	savLocs.close()
+
+	// soma locs
+	midSecX.resize(0)
+	midSecY.resize(0)
+	midSecZ.resize(0)
+	
+	forsec cell.somatic{
+		midSecX.append(x_xtra(0.5))
+		midSecY.append(y_xtra(0.5))
+		midSecZ.append(z_xtra(0.5))
+	}
+	
+	savLocs = new File()
+	sprint(s,"./results/%s/locs_somatic.txt",result_folder)
+	savLocs.wopen(s)
+	
+	for i=0,midSecX.size()-1 {
+		savLocs.printf("%.4f %.4f %.4f\n", midSecX.x(i), midSecY.x(i), midSecZ.x(i))
+	}
+	
+	savLocs.close()
+	
+	// apical locs
+	midSecX.resize(0)
+	midSecY.resize(0)
+	midSecZ.resize(0)
+	
+	forsec cell.apical{
+		midSecX.append(x_xtra(0.5))
+		midSecY.append(y_xtra(0.5))
+		midSecZ.append(z_xtra(0.5))
+	}
+	
+	savLocs = new File()
+	sprint(s,"./results/%s/locs_apical.txt",result_folder)
+	savLocs.wopen(s)
+	
+	for i=0,midSecX.size()-1 {
+		savLocs.printf("%.4f %.4f %.4f\n", midSecX.x(i), midSecY.x(i), midSecZ.x(i))
+	}
+	
+	savLocs.close()
+	
+	// basal locs
+	midSecX.resize(0)
+	midSecY.resize(0)
+	midSecZ.resize(0)
+	
+	forsec cell.basal{
+		midSecX.append(x_xtra(0.5))
+		midSecY.append(y_xtra(0.5))
+		midSecZ.append(z_xtra(0.5))
+	}
+	
+	savLocs = new File()
+	sprint(s,"./results/%s/locs_basal.txt",result_folder)
+	savLocs.wopen(s)
+	
+	for i=0,midSecX.size()-1 {
+		savLocs.printf("%.4f %.4f %.4f\n", midSecX.x(i), midSecY.x(i), midSecZ.x(i))
+	}
+	
+	savLocs.close()
+	
+	// axonal locs
+	midSecX.resize(0)
+	midSecY.resize(0)
+	midSecZ.resize(0)
+	
+	forsec cell.axonal{
+		midSecX.append(x_xtra(0.5))
+		midSecY.append(y_xtra(0.5))
+		midSecZ.append(z_xtra(0.5))
+	}
+	
+	savLocs = new File()
+	sprint(s,"./results/%s/locs_axonal.txt",result_folder)
+	savLocs.wopen(s)
+	
+	for i=0,midSecX.size()-1 {
+		savLocs.printf("%.4f %.4f %.4f\n", midSecX.x(i), midSecY.x(i), midSecZ.x(i))
+	}
+	
+	savLocs.close()
+	
+}

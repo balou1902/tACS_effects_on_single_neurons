@@ -1,0 +1,32 @@
+//strdef result_folder
+//sprint(result_folder, "test") // Results folder name
+
+
+//Blue Brain cell index
+my_cell_type = 25 // number 16 of cells
+plot_neuron = 0
+
+Synapse_on = 0 // neuron silent or not? = subthreshold OR suprathreshold activity?
+
+STIM_TYPE = 1 // TACS: 1, TMS: 2
+FREQ = 10 // Hz - frequency of the TACS stimulation
+TMSAMP = -1
+
+if (Synapse_on) {
+    DEL = 500 // ms - delay to first phase
+    DUR = 2*DEL // ms - duration of stimulation
+    tstop = 2*DEL+DUR
+
+} else { // subthreshold
+    DEL = 200 // ms 
+    DUR = 1100 // ms - duration of stimulation
+    tstop = DEL+DUR
+}
+
+// uniform E field stimulation
+//theta = 180 // deg - polar angle
+//phi = 0 // deg - azimuthal angle
+EX = 0
+EY = -1
+EZ = 0
+
