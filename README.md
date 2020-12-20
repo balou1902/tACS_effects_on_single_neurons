@@ -3,8 +3,8 @@
 This folder contains the codes used in the paper Tran et al., 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. In this paper, we investigated the effects of tACS amplitudes on computational models of single neocortical neurons.
 
 ## Information about the data
-Due to the high size of data, not all of them will be available in that depository. Some are given and will be used as an example. The different neurons model used are those used in [aberra2018biophysically].
-
+A set of 25 neocortical cells was used in this investigation and can be downloaded from ModelDB (accession number: 066023 or click here https://senselab.med.yale.edu/modeldb/ShowModel?model=241165#tabs-1).
+Further information about the cell dynamics can be found in [aberra2018biophysically].
 
 
 ## Data generation
