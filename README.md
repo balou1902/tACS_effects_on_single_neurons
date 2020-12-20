@@ -16,7 +16,7 @@ To analyse the data, a custom matlab code was used.
 ### Subthreshold activity analysis
 Run the code 'subthreshold_analysis.m'. This code analyzes the somatic membrane fluctuations for silent neurons and computes the polarization length for each cell. This code generates each of the subplots of the figure 2 of the article. Please notice that a path change for the matlab working directory is required.
 
-### Suprathreshold activtiy analysis
+### Suprathreshold activity analysis
 
 
 
