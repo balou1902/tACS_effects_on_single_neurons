@@ -13,6 +13,11 @@ The data were generated using NEURON environement 7.8.1  You can download this s
 ## Data analysis
 To analyse the data, a custom matlab code was used.
 
+### Subthreshold activity analysis
+Run the code 'subthreshold_analysis.m'.
+
+### Suprathreshold activtiy analysis
+
 
 
 ## Reference
