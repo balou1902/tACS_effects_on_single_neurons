@@ -1,12 +1,8 @@
-//strdef result_folder
-//sprint(result_folder, "test") // Results folder name
-
-
 //Blue Brain cell index
-my_cell_type = 25 // number 16 of cells
+my_cell_type = 25 // index of the cell between 1 and 25
 plot_neuron = 0
 
-Synapse_on = 0 // neuron silent or not? = subthreshold OR suprathreshold activity?
+Synapse_on = 0 // Do we want to use a silent neuron silent?
 
 STIM_TYPE = 1 // TACS: 1, TMS: 2
 FREQ = 10 // Hz - frequency of the TACS stimulation
