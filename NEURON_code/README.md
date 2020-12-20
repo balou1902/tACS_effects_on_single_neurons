@@ -5,6 +5,15 @@ This folder contains all the required .hoc files to generate the somatic membran
 
 ## Files description
 
+### init.hoc
+
+### mySettings.hoc
+
+### mySynapse.hoc
+
+### exportLocs
+
+
 
 
 
