@@ -7,7 +7,7 @@ This folder contains all the required .hoc files to generate the somatic membran
 
 ### init.hoc
 
-This file is the main file of the simulation. All the .hoc files required to run a simulation are loaded. The user can use a simple value for the tACS amplitude or a vector of values. At the end of the simulation, a folder will be generated in which results will be saved.
+This file is the main file of the simulation. All the .hoc files required to run a simulation are loaded. The user can use a simple value for the tACS amplitude or a vector of values. At the end of the simulation, a folder will be generated in which results will be saved. This is the file you need to run to launch a simulation.
 Please notice that you need to modify the path of your working directory.
 
 ### mySettings.hoc
@@ -20,12 +20,14 @@ This files generates the synaptic input and the user can modify parameters such 
 
 ### exportLocs.hoc
 
-This file saved all the coordinates of each segment of a neuron morphology.
+This file saves all the coordinates of each segment of a neuron morphology.
 
 ### stimwaveform.hoc
 This file generates the waveform of the TACS using the different inputs (stimulation frequency, amplitudes, stimulation length).
 
 ### interpCoordinates.hoc
+
+This file computes xyz coordinates of nodes in a model cell.
 
 ### interpCoordinates.hoc
 This file sets different parameters related to the neuron morphology.
