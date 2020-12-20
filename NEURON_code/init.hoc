@@ -73,6 +73,7 @@ proc color_plotmax() { local plot_mode,save_fig
 objref amplitude
 amplitude.x[0] = 0.5
 // if several amplitudes, create a vector
+// example: amplitude.x[1] = 2...
 
 // we choose the cell
 cell_chooser(my_cell_type)
@@ -95,7 +96,6 @@ for (k = 0 ; k<=amplitude.size()-1; k += 1){
     getes()
     exportLocs()  
     run_APsite_save()
-    exportVoltage()
 }
 
 t1 = startsw()
