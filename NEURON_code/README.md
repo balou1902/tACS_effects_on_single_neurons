@@ -32,4 +32,9 @@ This file sets different parameters related to the neuron morphology.
 
 This file assigns biophysical parameters to myelinated axon.
 
+### myelinBiophysics.hoc
+
+This file sets up the pointers after the sections have been created
+
+
 
