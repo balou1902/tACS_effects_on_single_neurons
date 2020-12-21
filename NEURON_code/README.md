@@ -26,10 +26,6 @@ This file saves all the coordinates of each segment of a neuron morphology.
 This file generates the waveform of the TACS using the different inputs (stimulation frequency, amplitudes, stimulation length).
 
 ### interpCoordinates.hoc
-
-This file computes xyz coordinates of nodes in a model cell.
-
-### interpCoordinates.hoc
 This file sets different parameters related to the neuron morphology.
 
 ### myelinBiophysics.hoc
