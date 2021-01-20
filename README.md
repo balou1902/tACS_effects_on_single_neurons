@@ -14,7 +14,7 @@ The data were generated using NEURON environement 7.8.1  You can download this s
 
 ## Data analysis
 
-NB: due to the large amount of data, the files for all neurons are not available on github.
+NB: due to the large amount of data, the files for all neurons are not available on github. All the files required for the analysis are however available.
 
 ### Subthreshold activity analysis
 
