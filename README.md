@@ -16,11 +16,8 @@ The data were generated using NEURON environement 7.8.1  You can download this s
 
 NB: due to the large amount of data, the files for all neurons are not available on github. All the files required for the analysis are however available.
 
-### Subthreshold activity analysis
+For sub(supra)threshold investigation, the code is quite similar. For the suprathreshold activity investigation, a synapse was modeled. If you are investigating the subthreshold activity, a silent neuron is used (no synapse). In that case, please comment line 92 from the init.hoc file. Run the code 'subthreshold_analysis.m'. This code analyzes the somatic membrane fluctuations for silent neurons and computes the polarization length for each cell. This code generates each of the subplots of the figure 2 of the article. Please notice that a path change for the matlab working directory is required.
 
-For sub(supra)threshold investigation, the code is quite similar. For the suprathreshold activity investigation, a synapse was modeled. If you are investigating the subthreshold activity, a silent neuron is used (no synapse). In that case, please comment line 92 from the init.hoc file.Run the code 'subthreshold_analysis.m'. This code analyzes the somatic membrane fluctuations for silent neurons and computes the polarization length for each cell. This code generates each of the subplots of the figure 2 of the article. Please notice that a path change for the matlab working directory is required.
-
-### Suprathreshold activity analysis
 
 
 
