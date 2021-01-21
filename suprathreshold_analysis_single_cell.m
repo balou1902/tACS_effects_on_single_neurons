@@ -2,21 +2,21 @@ clear all
 close all
 clc
 
-% Description:
+% description:
 %   Code to analyze the somatic membrane potential of a single cell when
 %   stimulated by tACS
 % code created in June 2020
 
 
-% Correspondance: htran@umn.edu
+% correspondance: htran@umn.edu
 
 %% -------------------------------------------------------------------------
 clear all
 close all
 clc
 
-% We create a vector of different tACS amplitudes
-% Realistic amplitudes in humans: 0.1 - 3 mV/mm (Can be higher for
+% we create a vector of different tACS amplitudes
+% realistic amplitudes in humans: 0.1 - 3 mV/mm (Can be higher for
 % non-human primates)
 
 amplitude = [0:0.1:2 2.2:0.2:5 6.25:1.25:10 12.5:2.5:25];
@@ -46,7 +46,7 @@ tacs_start_sample = DEL/dt; % samples
 tacs_end_sample = (DEL + DUR)/dt; % samples
 freq = 10;
 
-% Creation of a sham tACS
+% creation of a sham tACS
 sham_tacs =  sin(2*pi*freq*t/1000);
 [~, idx] = findpeaks(tacs, 'MinPeakHeight', 0);
 
@@ -55,7 +55,7 @@ tacs_peak = ShamPeaks(ShamPeaks>tacs_start & ShamPeaks<tacs_end);
 
 %% 
 
-% Computation of number of spikes
+% computation of number of spikes
 for i=1:Namp   
     clear idx
     [~, idx] = findpeaks(somaV(i,:), 'MinPeakHeight', 0);
@@ -66,7 +66,7 @@ for i=1:Namp
     
 end
 
-% Computation of the firing rate
+% computation of the firing rate
 for i=1:Namp
     spikes_rate(i,1) = length(spikes{i,2})/DUR*1000; % TACS ON
     spikes_rate(i,2) = (length(spikes{i,1})+length(spikes{i,1}))/DUR*1000; % TACS OFF (pre + post)
@@ -85,7 +85,7 @@ title('Firing rate')
 ylabel('spikes per second')
 xlim([0 5])
 
-% Computation of the phase-locking value (PLV) (
+% computation of the phase-locking value (PLV) (
 for i=1:Namp
      PLV(i,1) = getPLV(spikes{i,1},sham_tacs,tacs_start_sample,tacs_end_sample,dt,1);
      [PLV(i,2) times{i,1}] = getPLV(spikes{i,2},sham_tacs,tacs_start_sample,tacs_end_sample,dt,2);
@@ -93,7 +93,7 @@ for i=1:Namp
 end
 
 
-%% Computation of the ISI - InterSpike Interval
+%% computation of the ISI - InterSpike Interval
 
 x=[];
 g=[];
@@ -132,7 +132,7 @@ xlabel(' EF amplitude (V/m)')
 title(['Amplitude of ' num2str(amplitude(idx_amp), '%.1f') ' V/m'])
 
 
-%% Additional statistic computation: rayleigh and Vector Strength
+%% additional statistic computation: rayleigh and Vector Strength
 
 for i=1:Namp
     [results{i,1}] = GetData(somaV(i,:),t,tacs_start,tacs_end,tstop,tacs_peak);
@@ -153,9 +153,9 @@ title('Rayleigh statistics')
 
 
 
-%% Computation of polar histograms for a specific amplitude
+%% computation of polar histograms for a specific amplitude
 
-% Requirement: Circular Statistics Toolbox 
+% requirement: Circular Statistics Toolbox 
 % link to download the toolbox: 
 % https://www.mathworks.com/matlabcentral/fileexchange/10676-circular-statistics-toolbox-directional-statistics
 
@@ -198,5 +198,5 @@ p = circ_otest(alpha)
 
 % 3) Rao test
 p = circ_raotest(alpha)
-%For the examples, we find that, at the 0:05 significance level, the null hypothesis cannot be
-%rejected for either sample (P > 0.05).
+% for the examples, we find that, at the 0:05 significance level, the null hypothesis cannot be
+% rejected for either sample (P > 0.05).
